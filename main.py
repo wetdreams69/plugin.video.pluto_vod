@@ -3,7 +3,7 @@ import urllib.parse
 import xbmcplugin
 import xbmcgui
 
-from search import search, list_series, list_episodes
+from search import search, list_series, list_episodes, list_categories, list_category_items
 from player import play
 
 addon_handle = int(sys.argv[1])
@@ -34,6 +34,12 @@ def router():
 
         xbmcplugin.endOfDirectory(addon_handle)
 
+    elif action == "categories":
+        list_categories(addon_handle)
+
+    elif action == "category_items":
+        list_category_items(addon_handle, params["id"])
+
     elif action == "series":
         list_series(addon_handle, params["id"])
 
@@ -47,6 +53,9 @@ def router():
         li = xbmcgui.ListItem(label="Buscar")
         url = f"{sys.argv[0]}?action=search"
         xbmcplugin.addDirectoryItem(addon_handle, url, li, True)
+
+        list_categories(addon_handle, show_end_directory=False)
+        
         xbmcplugin.endOfDirectory(addon_handle)
 
 

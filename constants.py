@@ -1,7 +1,10 @@
 URL_AUTH_START = "https://boot.pluto.tv/v4/start"
 URL_SEARCH = "https://service-media-search.clusters.pluto.tv/v1/search"
+URL_CATEGORIES = "https://service-vod.clusters.pluto.tv/v4/vod/categories"
+URL_CATEGORY_ITEMS = "https://service-vod.clusters.pluto.tv/v4/vod/categories/{category_id}/items"
 URL_SERIES_SEASONS = "https://service-vod.clusters.pluto.tv/v3/vod/series/{content_id}/seasons"
 URL_EPISODES = "https://service-vod.clusters.pluto.tv/v4/vod/episodes/{content_id}"
+URL_ON_DEMAND = "https://pluto.tv/on-demand"
 URL_STREAM_STITCHER = "https://cfd-v4-service-stitcher-dash-use1-1.prd.pluto.tv"
 URL_DRM_LICENSE = "https://service-concierge.clusters.pluto.tv/v1/wv/alt?jwt={token}"
 
@@ -44,6 +47,17 @@ AUTH_PARAMS_START = {
 
 SEARCH_PARAMS = {
     "limit": 50,
+}
+
+CATEGORIES_PARAMS = {
+    "includeItems": "false",
+    "includeCategoryFields": "description,iconSvg",
+    "sort": "number:asc",
+}
+
+CATEGORY_ITEMS_PARAMS = {
+    "offset": 0,
+    "page": 1,
 }
 
 DEVICE_PARAMS = {
