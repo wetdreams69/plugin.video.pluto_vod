@@ -22,15 +22,11 @@ AUTH_PARAMS = {
     "appName": "web",
     "appVersion": "9.20.0-89258290264838515e264f5b051b7c1602a58482",
     "clientModelNumber": "1.0.0",
-    "country": "AR",
     "deviceDNT": "false",
-    "deviceLat": "-34.6200",
-    "deviceLon": "-58.4600",
     "deviceMake": "chrome",
     "deviceModel": "web",
     "deviceType": "web",
     "deviceVersion": "142.0.0",
-    "marketingRegion": "VE",
     "serverSideAds": "false",
 }
 
